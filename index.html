@@ -1,210 +1,46 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Untuk Cewek Tersayang ❤️</title>
 
-<style>
-body{
-    margin:0;
-    font-family:Arial,sans-serif;
-    background:linear-gradient(180deg,#ffe8f0,#fff8e7);
-    text-align:center;
-    overflow-x:hidden;
-}
+<title>Untuk Dedee ❤️</title>
 
-.container{
-    padding:30px;
-}
+<link rel="stylesheet" href="style.css">
 
-h1{
-    color:#ff5e8a;
-    font-size:35px;
-}
-
-p{
-    font-size:18px;
-    color:#555;
-    line-height:1.8;
-}
-
-button{
-    background:#ff7aa8;
-    color:white;
-    border:none;
-    padding:15px 25px;
-    border-radius:30px;
-    font-size:18px;
-    cursor:pointer;
-    transition:.3s;
-}
-
-button:hover{
-    transform:scale(1.08);
-}
-
-#surat{
-    display:none;
-    background:white;
-    max-width:650px;
-    margin:30px auto;
-    padding:25px;
-    border-radius:20px;
-    box-shadow:0 10px 20px rgba(0,0,0,.15);
-}
-
-.cat{
-    font-size:70px;
-    animation:lompat 2s infinite;
-}
-
-@keyframes lompat{
-0%,100%{transform:translateY(0);}
-50%{transform:translateY(-15px);}
-}
-
-.hearts{
-position:fixed;
-left:0;
-top:0;
-width:100%;
-height:100%;
-pointer-events:none;
-overflow:hidden;
-}
-
-.heart{
-position:absolute;
-font-size:20px;
-animation:naik 6s linear infinite;
-}
-
-@keyframes naik{
-0%{
-transform:translateY(100vh);
-opacity:1;
-}
-100%{
-transform:translateY(-100px);
-opacity:0;
-}
-}
-</style>
 </head>
 
 <body>
 
-<div class="hearts" id="hearts"></div>
+<div id="stars"></div>
 
 <div class="container">
 
-<div class="cat">🐱💕</div>
+<h1>🐱❤️</h1>
 
-<h1>Hai Cantikkuu ❤️</h1>
-
-<p>
-Website kecil ini aku buat khusus buat orang yang paling aku sayang.
-</p>
-
-<button onclick="bukaSurat()">Klik yaa 😺</button>
-
-<div id="surat">
-
-<h2>💌 Surat Untuk Kamu 💌</h2>
+<h2>Hai Dedee...</h2>
 
 <p>
 
-Hai sayangku...
+Mas punya sesuatu buat Dedee.
 
-Makasih ya karena udah hadir di hidup aku.
+Website kecil ini dibuat khusus untuk orang yang paling Mas sayang.
 
-Terima kasih udah selalu nemenin aku,
-ngedengerin cerita aku,
-dan bikin hari-hari aku jadi jauh lebih berwarna.
-
-Kalau aku kadang nyebelin,
-keras kepala,
-atau bikin kamu kesel...
-
-Makasih karena kamu masih tetap milih buat bertahan.
-
-Aku mungkin belum jadi orang yang sempurna.
-
-Tapi satu hal yang selalu pengen aku lakuin...
-
-adalah terus belajar jadi orang yang lebih baik buat kamu.
-
-🐱❤️
-
-Kalau kita diibaratkan dua ekor kucing...
-
-Aku bakal tetap pulang ke rumah yang sama.
-
-Rumah itu adalah kamu.
-
-Semoga kita bisa terus sama-sama,
-ketawa bareng,
-cerita bareng,
-dan bikin kenangan sebanyak mungkin.
-
-Aku sayang kamu...
-hari ini,
-besok,
-lusa,
-dan selama yang Tuhan izinin.
-
-❤️
+Semoga Dedee suka yaa 🤍
 
 </p>
 
-<h2>🐾</h2>
+<button id="startBtn">
 
-<p>
-"Kalau suatu hari nanti kamu capek,
-ingat ya...
+Buka Surat 💌
 
-selalu ada aku yang siap meluk kamu.
-
-Walaupun cuma lewat chat.
-
-Dan kalau bisa...
-
-selamanya. 🤍"
-</p>
-
-<h2>I Love You ❤️</h2>
+</button>
 
 </div>
 
-</div>
-
-<script>
-
-function bukaSurat(){
-document.getElementById("surat").style.display="block";
-window.scrollTo({
-top:document.body.scrollHeight,
-behavior:"smooth"
-});
-}
-
-function buatHati(){
-const hati=document.createElement("div");
-hati.classList.add("heart");
-hati.innerHTML=Math.random()>0.5?"❤️":"🐾";
-hati.style.left=Math.random()*100+"vw";
-hati.style.fontSize=(20+Math.random()*25)+"px";
-document.getElementById("hearts").appendChild(hati);
-
-setTimeout(()=>{
-hati.remove();
-},6000);
-}
-
-setInterval(buatHati,400);
-
-</script>
+<script src="script.js"></script>
 
 </body>
+
 </html>
